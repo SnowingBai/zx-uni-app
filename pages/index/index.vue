@@ -10,6 +10,16 @@
 			>
 				{{title}}
 			</text>
+			<uni-icon type="contact" size="30"></uni-icon>
+			<uni-card
+				:is-full="true"
+				title="DCloud"
+				thumbnail="http://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png"
+				extra="2018.12.12"
+				note="Tips"
+			>
+				内容主体，可自定义内容及样式，内容主体，可自定义内容及样式，内容主体，可自定义内容及样式
+			</uni-card>
 		</view>
 	</view>
 </template>
