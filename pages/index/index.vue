@@ -2,7 +2,14 @@
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view>
-			<text class="title">{{title}}</text>
+			<text
+				class="title"
+				v-clipboard:copy="title"
+				v-clipboard:success="onCopy"
+				v-clipboard:error="onError"
+			>
+				{{title}}
+			</text>
 		</view>
 	</view>
 </template>
@@ -18,7 +25,16 @@
 
 		},
 		methods: {
-
+			onCopy: function (e) {
+				uni.showModal({
+					content: 'You just copied: ' + e.text
+				})
+			},
+			onError: function (e) {
+				uni.showModal({
+					content: 'Failed to copy texts'
+				})
+			}
 		}
 	}
 </script>
