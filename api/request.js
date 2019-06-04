@@ -9,7 +9,7 @@ export default function (url, method, data = {}) {
   uni.request({
     url: config.apiUrl + url,
     method,
-    data,
+    data
   })
   .then(res => {
     return res
